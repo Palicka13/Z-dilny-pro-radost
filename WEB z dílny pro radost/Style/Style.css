@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Passion+One:wght@400;700&display=swap');
+
+html {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.page {
+  margin: 0;
+  padding: 0;
+}
+.menu {
+  margin: 2em 7.5em;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigatin__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.navigatin__title * {
+  margin: 0;
+  font-size: 1.14em;
+}
+.navigatin__title--nazev {
+  font-size: 1em;
+  font-weight: bold;
+}
+.navigatin__title--logo {
+  width: 100px;
+  height: auto;
+}
+.navigation__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.navigation__menu li {
+  font-size: 1.14em;
+  display: block;
+}
+li a {
+  padding: 2.5em 1em;
+}
+.navigation__menu a:hover {
+  background-color:beige;
+}
+.kosik {
+  width: 50px;
+  height: 50px;
+  content: url(../Fotky/trolley-cart-ui-2-svgrepo-com.svg);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.swaper{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.swaper__item {
+  display: none;
+  overflow: hidden;
+}
+.swaper__content {
+  width: 500px;
+  height: 500px;
+  margin: 2em;
+}
+.swaper__item-content a img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+}
+
+.text-block * {
+  margin: 0;
+  line-height: 2em;
+}
+.content {
+  margin: 7em;
+}
+.content__obchodní-podminky--text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.products {
+  margin: 7em;
+  display: flex;
+  flex-direction: column;
+  gap: 7em;
+  align-items: center;
+}
+.product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) ;
+  gap: 6em;
+}
+.product-andel {
+}
+.product--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  max-width: 20em;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.product--wrapper:hover {
+  transform: scale(120%);
+  border-radius: 20px;
+  box-shadow: 0 0 8px 2px black;
+}
+.products__nabidka {
+  text-align: center;
+}
+.products__nabidka--nazev-odvetvi {
+  font-size: 3em;
+}
+.products__nabidka--menu > * {
+  font-size: 1.45em;
+}
+.products__nabidka--menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3em;
+  margin: 0;
+  padding: 0;
+}
+.products__nabidka--menu li {
+  display: block;
+}
+.products__nabidka--menu li a {
+  padding: 0;
+}
+.product__text-block {
+  margin: 0.5em 1.45em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.product__text-block * {
+  margin: 0;
+  padding: 0;
+}
+.product__text-block--vlastnost {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.product__text-block--vlastnost p {
+  text-align: center;
+}
+.product__text-block--nakup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1em;
+  gap: 0.5em;
+}
+.btn--do-kosiku {
+  background-color: rgb(187, 154, 210);
+  padding: 10px 15px;
+  color: white;
+}
+footer {
+  background-color: aliceblue;
+  text-align: center;
+}
+.footer--created-by {
+  padding: 2em 1em;
+}

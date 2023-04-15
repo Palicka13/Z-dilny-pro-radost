@@ -30,6 +30,10 @@ a {
   background-color:beige;
   font-weight: bold;
 }
+.hamburger-btn img{
+  width: 50px;
+  height: 50px;
+}
 .btn--do-kosiku {
   background-color: rgb(187, 154, 210);
   padding: 10px 15px;
@@ -46,8 +50,43 @@ footer {
     font-size: 12px;
   }
   .menu {
-    
+    margin: 0.5em 1em ;
   }
+  .navigation {
+    display: flex;
+    flex-direction: row;;
+    justify-content: space-between;
+    align-items: center; 
+  }
+  .navigatin__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .navigatin__title--logo {
+    width: 50px;
+    height: auto;
+  }
+  .navigation__menu li {
+    font-size: 1.14em;
+    display: block;
+  }
+  li a {
+    padding: 2.5em 1em;
+  }
+  .hamburger-nav {
+    display: none;
+  }
+  .active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }  
 }
 
 /* Desktop styles */
@@ -93,6 +132,9 @@ footer {
   }
   li a {
     padding: 2.5em 1em;
+  }
+  .hamburger-row {
+    display: none;
   }
   .kosik {
     width: 50px;
@@ -228,24 +270,24 @@ footer {
     justify-content: center;
     gap: 2em;
   }
-  .footer__menu {
+  .footer__menu--menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 0;
     margin: 0;
   }
-  .footer__menu li {
+  .footer__menu--menu li {
     font-size: 1.14em;
     display: block;
     margin: 0;
     padding: 0;
   }
-  .footer__menu li a {
+  .footer__menu--menu li a {
     display: block;
     padding: 0;
   }
-  .footer__menu a:hover {
+  .footer__menu--menu a:hover {
     font-weight: bold;
   }
   .footer--created-by {

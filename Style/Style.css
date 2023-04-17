@@ -43,6 +43,46 @@ footer {
   background-color: aliceblue;
   text-align: center;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.swaper{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.swaper__item {
+  display: none;
+  overflow: hidden;
+}
+.swaper__content {
+  width: 500px;
+  height: 500px;
+  margin: 2em;
+}
+.swaper__item-content a img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+}
+.content__obchodní-podminky--text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
 /* Mobile styles */
 @media (max-width: 900px) {
@@ -50,11 +90,11 @@ footer {
     font-size: 12px;
   }
   .menu {
-    margin: 0.5em 1em ;
+    margin: 1em 1.5em ;
   }
   .navigation {
     display: flex;
-    flex-direction: row;;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center; 
   }
@@ -69,6 +109,14 @@ footer {
     width: 50px;
     height: auto;
   }
+  .navigation__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
   .navigation__menu li {
     font-size: 1.14em;
     display: block;
@@ -76,6 +124,10 @@ footer {
   li a {
     padding: 2.5em 1em;
   }
+  .hamburger-row {
+    display: none;
+  }
+  /*
   .hamburger-nav {
     display: none;
   }
@@ -86,7 +138,34 @@ footer {
     align-items: center;
     padding: 0;
     margin: 0;
-  }  
+  }  */
+  .kosik--buttons {
+    content: url(../Fotky/trolley-cart-ui-2-svgrepo-com.svg);
+    width: 50px;
+    height: 50px;
+  }
+  .content {
+    margin: 4em;
+  }
+  .products {
+    margin: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    align-items: center;
+  }
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  .product--wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 30em;
+    overflow: hidden;
+    border-radius: 20px;
+  }
 }
 
 /* Desktop styles */
@@ -141,52 +220,12 @@ footer {
     height: 50px;
     content: url(../Fotky/trolley-cart-ui-2-svgrepo-com.svg);
   }
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .swaper{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .swaper__item {
-    display: none;
-    overflow: hidden;
-  }
-  .swaper__content {
-    width: 500px;
-    height: 500px;
-    margin: 2em;
-  }
-  .swaper__item-content a img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    border: none;
-    border-radius: 10px;
-  }
   .text-block * {
     margin: 0;
     line-height: 2em;
   }
   .content {
     margin: 7em;
-  }
-  .content__obchodní-podminky--text-block {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
   }
   .products {
     margin: 7em;

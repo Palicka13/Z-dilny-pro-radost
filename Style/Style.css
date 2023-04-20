@@ -26,12 +26,15 @@ a {
   margin: 0;
   padding: 0;
 }
+.menu {
+  background-color: #D6ECFF;
+}
 .navigation {
   justify-content: center !important;
   gap: 5em;
 }
 .navigation__menu a:hover {
-  background-color:beige;
+  background-color:#F5F5DC;
   font-weight: bold;
 }
 .hamburger-btn img{
@@ -81,6 +84,9 @@ a {
 .products__nabidka--menu li {
   display: block;
 }
+.products__nabidka--menu li:hover a {
+  font-weight: bold;
+}
 .products__nabidka--menu li a {
   padding: 0;
 }
@@ -89,14 +95,15 @@ a {
   font-weight: bold;
 }
 .btn--do-kosiku {
-  background-color: rgb(187, 154, 210);
+  background-color: #DEAAEE;
   padding: 10px 15px !important;
   border-radius: 10px;
   color: white;
 }
 footer {
-  background-color: aliceblue;
+  background-color: #D6ECFF;
   text-align: center;
+  padding: 2em 0;
 }
 .footer--container {
   display: flex;
@@ -130,8 +137,17 @@ footer {
   font-weight: bold;
 }
 .footer--created-by {
-  padding: 2em 1em;
+  padding-top: 2em;
 } 
+.footer__socialni-site {
+  display: flex;
+  flex-direction: column;;
+  gap: 0.5em;
+}
+ .facebook img, .instagram img{
+  width: 25px;
+  height: 25px;
+}
 
 /* Mobile styles */
 @media (max-width: 900px) {
@@ -139,13 +155,14 @@ footer {
     font-size: 12px;
   }
   .menu {
-    margin: 1em 1.5em ;
+    padding: 1em 1.5em ;
   }
   .navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
+    gap: 1em;
   }
   .navigatin__title {
     display: flex;
@@ -171,7 +188,7 @@ footer {
     display: block;
   }
   li a {
-    padding: 2.5em 1em;
+    padding: 2em 0.5em;
   }
   .hamburger-row {
     display: none;
@@ -188,13 +205,17 @@ footer {
     padding: 0;
     margin: 0;
   }  */
-  .kosik--buttons {
-    content: url(../Fotky/trolley-cart-ui-2-svgrepo-com.svg);
+  .btn--kosik {
+    content: url(../Fotky/bag-svgrepo-com.svg);
     width: 50px;
     height: 50px;
   }
   .content {
     margin: 4em;
+  }
+  .swaper__content {
+    width: 350px;
+    height: 350px;
   }
   .products {
     margin: 4em;
@@ -204,8 +225,9 @@ footer {
     align-items: center;
   }
   .product {
+    max-width: 800px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2em;
   }
   .product--wrapper {
@@ -257,14 +279,21 @@ footer {
     gap: 0.5em;
   }
   .footer--container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__socialni-site {
+    display: flex;
+    flex-direction: row;
   }
 }
 
 /* Desktop styles */
 @media screen and (min-width: 1281px) {
   .menu {
-    margin: 2em 7.5em;
+    padding: 2em 7.5em;
   }
   .navigation {
     display: flex;
@@ -308,10 +337,10 @@ footer {
   .hamburger-row {
     display: none;
   }
-  .kosik {
+  .btn--kosik {
     width: 50px;
     height: 50px;
-    content: url(../Fotky/trolley-cart-ui-2-svgrepo-com.svg);
+    content: url(../Fotky/bag-svgrepo-com.svg);
   }
   .text-block * {
     margin: 0;

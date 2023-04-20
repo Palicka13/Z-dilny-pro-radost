@@ -26,6 +26,10 @@ a {
   margin: 0;
   padding: 0;
 }
+.navigation {
+  justify-content: center !important;
+  gap: 5em;
+}
 .navigation__menu a:hover {
   background-color:beige;
   font-weight: bold;
@@ -33,15 +37,6 @@ a {
 .hamburger-btn img{
   width: 50px;
   height: 50px;
-}
-.btn--do-kosiku {
-  background-color: rgb(187, 154, 210);
-  padding: 10px 15px;
-  color: white;
-}
-footer {
-  background-color: aliceblue;
-  text-align: center;
 }
 .container {
   display: flex;
@@ -83,6 +78,60 @@ footer {
   flex-direction: column;
   gap: 1em;
 }
+.products__nabidka--menu li {
+  display: block;
+}
+.products__nabidka--menu li a {
+  padding: 0;
+}
+.cena {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.btn--do-kosiku {
+  background-color: rgb(187, 154, 210);
+  padding: 10px 15px !important;
+  border-radius: 10px;
+  color: white;
+}
+footer {
+  background-color: aliceblue;
+  text-align: center;
+}
+.footer--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.footer__obchodni-podminky {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.footer__menu--menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.footer__menu--menu li {
+  font-size: 1.14em;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.footer__menu--menu li a {
+  display: block;
+  padding: 0;
+}
+.footer__menu--menu a:hover {
+  font-weight: bold;
+}
+.footer--created-by {
+  padding: 2em 1em;
+} 
 
 /* Mobile styles */
 @media (max-width: 900px) {
@@ -165,6 +214,50 @@ footer {
     max-width: 30em;
     overflow: hidden;
     border-radius: 20px;
+  }
+  .products__nabidka {
+    text-align: center;
+  }
+  .products__nabidka--nazev-odvetvi {
+    font-size: 2em;
+  }
+  .products__nabidka--menu > *{
+    font-size: 1.25em;
+  }
+  .products__nabidka--menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+  }
+  .product__text-block {
+    margin: 0.5em 1.45em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .product__text-block * {
+    margin: 0;
+    padding: 0;
+  }
+  .product__text-block--vlastnost {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+  }
+  .product__text-block--vlastnost p {
+    text-align: center;
+  }
+  .product__text-block--nakup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1em;
+    gap: 0.5em;
+  }
+  .footer--container {
+    display: block;
   }
 }
 
@@ -271,12 +364,6 @@ footer {
     margin: 0;
     padding: 0;
   }
-  .products__nabidka--menu li {
-    display: block;
-  }
-  .products__nabidka--menu li a {
-    padding: 0;
-  }
   .product__text-block {
     margin: 0.5em 1.45em;
     display: flex;
@@ -302,34 +389,4 @@ footer {
     margin: 0 1em;
     gap: 0.5em;
   }
-  .footer--container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-  }
-  .footer__menu--menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .footer__menu--menu li {
-    font-size: 1.14em;
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-  .footer__menu--menu li a {
-    display: block;
-    padding: 0;
-  }
-  .footer__menu--menu a:hover {
-    font-weight: bold;
-  }
-  .footer--created-by {
-    padding: 2em 1em;
-  } 
 }

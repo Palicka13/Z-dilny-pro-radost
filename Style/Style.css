@@ -30,12 +30,44 @@ a {
   background-color: #D6ECFF;
 }
 .navigation {
-  justify-content: center !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 5em;
+}
+.navigatin__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.navigation__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.navigation__menu li {
+  font-size: 1.14em;
+  display: block;
+}
+li a {
+  padding: 2.5em 1em;
 }
 .navigation__menu a:hover {
   background-color:#F5F5DC;
   font-weight: bold;
+}
+.btn--kosik {
+  width: 50px;
+  height: 50px;
+  content: url(../Fotky/bag-svgrepo-com.svg);
+}
+.hamburger-row {
+  display: none;
 }
 .hamburger-btn img{
   width: 50px;
@@ -89,6 +121,20 @@ a {
 }
 .products__nabidka--menu li a {
   padding: 0;
+}
+.products__nabidka {
+  text-align: center;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.product--wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
 }
 .cena {
   font-size: 1.25em;
@@ -158,40 +204,15 @@ footer {
     padding: 1em 1.5em ;
   }
   .navigation {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
     gap: 1em;
-  }
-  .navigatin__title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
   .navigatin__title--logo {
     width: 50px;
     height: auto;
   }
-  .navigation__menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .navigation__menu li {
-    font-size: 1.14em;
-    display: block;
-  }
   li a {
     padding: 2em 0.5em;
-  }
-  .hamburger-row {
-    display: none;
   }
   /*
   .hamburger-nav {
@@ -205,11 +226,6 @@ footer {
     padding: 0;
     margin: 0;
   }  */
-  .btn--kosik {
-    content: url(../Fotky/bag-svgrepo-com.svg);
-    width: 50px;
-    height: 50px;
-  }
   .content {
     margin: 4em;
   }
@@ -219,26 +235,13 @@ footer {
   }
   .products {
     margin: 4em;
-    display: flex;
-    flex-direction: column;
     gap: 4em;
-    align-items: center;
   }
   .product {
     max-width: 800px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 2em;
-  }
-  .product--wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 30em;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-  .products__nabidka {
-    text-align: center;
   }
   .products__nabidka--nazev-odvetvi {
     font-size: 2em;
@@ -290,21 +293,57 @@ footer {
   }
 }
 
+/* Tablet style */
+@media screen and (min-width: 900px) and (max-width:1280px) {
+  html {
+    font-size: 13px;
+  }
+  .menu {
+    padding: 1.5em 3em;
+  }
+  .navigatin__title--logo {
+    width: 100px;
+    height: auto;
+  }
+  .hamburger-row {
+    display: none !important;
+  }
+  .content {
+    margin: 7em;
+  }
+  .products {
+    margin: 4em;
+    gap: 6em;
+  }
+  .product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    gap: 6em;
+  }
+  .product--wrapper {
+    gap: 0.5em;
+  }
+  .products__nabidka--menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .product__text-block--nakup {
+    padding: 2em;
+  }
+}
+
 /* Desktop styles */
 @media screen and (min-width: 1281px) {
+  html {
+    font-size: 14px;
+  }
   .menu {
     padding: 2em 7.5em;
   }
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   .navigatin__title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1em;
   }
   .navigatin__title * {
@@ -319,29 +358,6 @@ footer {
     width: 100px;
     height: auto;
   }
-  .navigation__menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .navigation__menu li {
-    font-size: 1.14em;
-    display: block;
-  }
-  li a {
-    padding: 2.5em 1em;
-  }
-  .hamburger-row {
-    display: none;
-  }
-  .btn--kosik {
-    width: 50px;
-    height: 50px;
-    content: url(../Fotky/bag-svgrepo-com.svg);
-  }
   .text-block * {
     margin: 0;
     line-height: 2em;
@@ -351,33 +367,22 @@ footer {
   }
   .products {
     margin: 7em;
-    display: flex;
-    flex-direction: column;
     gap: 7em;
-    align-items: center;
   }
   .product {
     display: grid;
     grid-template-columns: repeat(4, 1fr) ;
     gap: 6em;
   }
-  .product-andel {
-  }
   .product--wrapper {
-    display: flex;
-    flex-direction: column;
     gap: 0.5em;
-    max-width: 20em;
-    border-radius: 20px;
-    overflow: hidden;
   }
   .product--wrapper:hover {
     transform: scale(120%);
     border-radius: 20px;
     box-shadow: 0 0 8px 2px black;
-  }
-  .products__nabidka {
-    text-align: center;
+    background-color: white;
+    z-index: 1;
   }
   .products__nabidka--nazev-odvetvi {
     font-size: 3em;
